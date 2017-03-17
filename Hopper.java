@@ -5,12 +5,12 @@
  */
 public class Hopper {
   // Array of characters for blocks that will fall. Ordered first to last.
-  char[] queue = new char[7];
+  char[] queue = new char[6];
   char NULL_CHAR = '\u0000';
   
   public char getNextShape() {
     if (queue[0] == NULL_CHAR) {
-      refillQueue();
+      // TODO: what happens when the array is empty?
     }
     
     // Get the first shape in the queue.

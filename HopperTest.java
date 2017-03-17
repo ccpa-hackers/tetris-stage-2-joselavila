@@ -13,7 +13,7 @@ public class HopperTest {
     char[] queue = hopper.queue;
     
     // Verify that the array is the right size.
-    assertEquals(queue.length, 7);
+    assertEquals("Hopper.queue is the wrong length", 7, queue.length);
   }
  
   /**
