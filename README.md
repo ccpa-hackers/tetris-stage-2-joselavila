@@ -30,11 +30,11 @@ To compile and run the JUnit tests:
 
 ### Tasks for this Assignment
 
- - [] Fix JUnitIntroTest.java (get the single test to pass)
- - [] Fix Hopper.java (there are two issues). 
- - [] Write at least 2 more test cases in HopperTest.java
- - [] Fix BlockStore.java 
- - [] Write at least 1 test case for ever method in BlockStore.java
+ - [ ] Fix JUnitIntroTest.java (get the single test to pass)
+ - [ ] Fix Hopper.java (there are two issues). 
+ - [ ] Write at least 2 more test cases in HopperTest.java
+ - [ ] Fix BlockStore.java 
+ - [ ] Write at least 1 test case for ever method in BlockStore.java
 
 ### Turn In
 
