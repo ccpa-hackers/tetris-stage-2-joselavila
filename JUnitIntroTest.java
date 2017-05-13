@@ -9,7 +9,7 @@ public class JUnitIntroTest {
   @Test
   public void testAssertEquals() {
     int whatIExpect = 42;
-    int actualResults = 1000;
-    assertEquals(actualResults, whatIExpect);
+    int actualResults = 42;
+    assertEquals(whatIExpect, actualResults);
   }
 }

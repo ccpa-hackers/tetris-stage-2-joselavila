@@ -5,7 +5,7 @@
  */
 public class Hopper {
   // Array of characters for blocks that will fall. Ordered first to last.
-  char[] queue = new char[6];
+  char[] queue = new char[7];
   char NULL_CHAR = '\u0000';
   
   public char getNextShape() {
@@ -17,7 +17,7 @@ public class Hopper {
     char next = queue[0];
     
     // Shift remaining shapes forward by 1.
-    for (int i = 1; i < queue.length; i++) {
+    for (int i = 0; i < queue.length; i++) {
       queue[i - 1] = queue[i];
     }
 

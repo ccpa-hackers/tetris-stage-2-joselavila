@@ -25,7 +25,7 @@ public class HopperTest {
     
     // Verify that the first shape is not empty.
     char shape = hopper.getNextShape();
-    assertNotEquals(shape, NULL_CHAR);
+    assertNotEquals("The shape should not be empty", NULL_CHAR, shape);
   }
   
   /**
@@ -38,7 +38,7 @@ public class HopperTest {
     for (int i = 0; i < 1000; i++) {
       // Verify that the shape is not empty.
       char shape = hopper.getNextShape();
-      assertNotEquals(shape, NULL_CHAR);
+      assertNotEquals("The shape should not be empty", NULL_CHAR, shape);
       
       // Verify that the size of the array never changes.
       assertEquals(hopper.queue.length, 7);

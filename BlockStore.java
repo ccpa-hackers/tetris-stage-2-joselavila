@@ -11,28 +11,63 @@ public class BlockStore {
   char NULL_CHAR = '\u0000';
   
   public boolean insert(int col, int row, char shape) {
-    // TODO: check boundaries
-    blocks[col][row] = shape;
-    return true;
+
+    if(col < blocks.length && col >= 0 ){
+      if(row < blocks[col].length && row >= 0){
+        blocks[col][row] = shape;
+        return true;
+      }  
+    }
+    return false;
   }
   
   public boolean isEmpty(int col, int row) {
-    // TODO: fix
-    return true;  
+      if(col < blocks.length && col >= 0 ){
+        if(row < blocks[col].length && row >= 0){
+          if(blocks[col][row] == NULL_CHAR){
+            return true;
+          }
+        }
+      }
+    return false;
   }
   
   public boolean isRowFilled(int row) {
-    // TODO: fix
+    if(row >= blocks[0].length || row < 0) { 
+      return false;
+    }
+      
+      for(int col = 0; col < blocks.length; col++){
+        char block = blocks[col][row];
+        if(block == NULL_CHAR){
+         return false;
+        }
+      }
+    
+      
     return true;
   }
   
   public boolean clear(int col, int row) {
-    // TODO: fix
-    return true;
+    if(col < blocks.length && col >= 0 ){
+      if(row < blocks[col].length && row >= 0){
+        blocks[col][row] = NULL_CHAR;
+        return true;
+      }  
+    }
+    return false; 
   }
-  
   public boolean shiftRowsDown(int rowCount) {
-    // TOOD: fix
-    return true;
+      if(rowCount < 1 || rowCount >= blocks[0].length){
+        return false;
+      }  
+        for(int row = blocks[0].length-rowCount - 1; row >= 0 ; row--){
+          for(int col = 0; col < blocks.length; col++){
+           blocks[col][row + rowCount] = blocks[col][row];
+           blocks[col][row] = NULL_CHAR;
+    }
+    
+  }
+  return true;
   }
 }
